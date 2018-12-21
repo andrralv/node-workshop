@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+  <div id='wrapper'>
+    <h2>first option (for loop)</h2>
+    <!-- Loop through object using for loop: Old School Syntax -->
+    <ul>
+        <% for(var i=0; i < users.length; i++) { %>
+          <li class="name"><%= users[i].name %></li>
+        <%} %>
+    </ul>
+    <h2>second option (map)</h2>
+    <!-- Loop through object using map: Recommended if you want to be cool -->
+    <ul>
+      <% Object.values(users).map((item, index) => { %>
+        <li class="name"><%= item.name %></li>
+      <%})%>
+    </ul>
+  </div>
+  <script>
+  // @andre: uncomment if you want to use fetch instead of axios
+  // fetch('http://localhost:8080/api').then(function(response){
+  //   return response.json();
+  // })
+  // .then((function(jsonResponse){
+  //   console.log(jsonResponse);
+  // }))
+  </script>
+  <script>
+    // hoisting example
+    console.log(myVar);
+    var myVar = "A hoisted variable";
+    // equals to
+    var myVar;
+    console.log(myVar);
+    myVar = "A hoisted variable";
+  </script>
+</html>
