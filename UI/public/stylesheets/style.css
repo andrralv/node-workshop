@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+#first-option {background-color: rgb(224, 224, 224); width: 50%;}
+#first-option h2 {text-decoration: underline; color: rgb(19, 0, 129)}
+#second-option {background-color: rgb(202, 202, 202); width: 50%;}
+#second-option h2 {text-decoration: underline; color: rgb(155, 0, 0);}
+
+#online-display {color: rgb(136, 226, 0); background-color: rgb(51, 51, 51); padding: 5px; width: 49%}
+#offline-display {color: red; background-color: rgb(24, 24, 24); padding: 5px; width: 49%}
