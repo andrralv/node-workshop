@@ -17,6 +17,14 @@ else {
 const {strategies} = workbox;
 workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
 
+
+
+workbox.routing.registerRoute('http://localhost:3001/',
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'static-resources'
+  })
+);
+
 workbox.routing.registerRoute('/stylesheets/style.css',
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'static-resources'
