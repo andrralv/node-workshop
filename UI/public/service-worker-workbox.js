@@ -23,7 +23,7 @@ workbox.routing.registerRoute('http://localhost:3001/',
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'static-resources'
   })
-);
+); 
 
 workbox.routing.registerRoute('/stylesheets/style.css',
   workbox.strategies.staleWhileRevalidate({
